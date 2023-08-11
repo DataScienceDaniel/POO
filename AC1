@@ -1,0 +1,139 @@
+public class App {
+
+    public static void main(String[] args) throws Exception {
+
+         int numPrimo = 6;
+
+         if (ePrimo(numPrimo)) {
+            System.out.println(ePrimo(numPrimo));
+         } else {
+            System.out.println(false);
+            divisores(numPrimo);
+         }
+
+         int numBissexto = 1900;
+         eBissexto(numBissexto);
+
+         int numDia = 1;
+         eDia(numDia);
+
+         eMedia(8.5, 8, 7);
+
+         eNumeroExibir();
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+    public static boolean ePrimo(int num)  {
+        boolean eP = true;
+        int i;
+        for (i = 2; i < num; i++ ) {
+            if (num % i == 0) {
+                return !eP;
+            }
+        }
+        return eP;
+    }
+
+    public static void divisores(int num) {
+        int i;
+        for (i = 1; i < num; i++) {
+            if (num % i == 0) {
+                System.out.println(i);
+            }
+        }
+     }
+
+
+   public static void eBissexto(int ano) {
+    if (ano % 100 == 0 && ano % 400 != 0) {
+        System.out.println("Não é Bissexto");
+
+ } else if (ano % 4 == 0) {
+    System.out.println("É Bissexto");
+
+ } else {
+    System.out.println("Não é bissexto");
+ }
+
+   }
+
+   public static void eDia(int dia) {
+        switch (dia) {
+            case 1:
+                System.out.println("Domingo");
+                break;
+            case 2:
+                System.out.println("Segunda");
+                break;
+            case 3:
+                System.out.println("Terça");
+                break;
+	        case 4:
+		        System.out.println("Quarta");
+                break;
+	        case 5:
+		        System.out.println("Quinta");
+                break;
+            case 6:
+		        System.out.println("Sexta");
+                break;
+	        case 7:
+		        System.out.println("Sábado");
+                break;
+	        default:
+		        System.out.println("Inválido");
+      }
+    }
+
+    public static void eMedia(double ap1, double ap2, double ac) {
+        double numMedia = (ap1 + ap2) * 0.4 + ac * 0.2;
+        System.out.println(numMedia);
+    }
+
+    public static void eNumeroExibir() {
+        int i;
+        for (i = 150; i < 201; i++) {
+           System.out.println(i);
+        }
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
