@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+public class App {
+
+    public static double soma(double num, double num2) {
+        return num + num2;
+
+    }
+
+    public static double subt(double num, double num2) {
+        return num - num2;
+    }
+
+    public static double mult(double num, double num2) {
+        return num * num2;
+    }
+
+    public static double div(double num, double num2) {
+        return num / num2;
+    }
+
+    public static void main(String[] args) throws Exception {
+         while (true) {
+            Scanner leitor = new Scanner(System.in);
+            double num, num2;
+            String operador, escolha;
+
+                    System.out.println("Escreva o Primeiro Número: ");
+                    num = leitor.nextDouble();
+
+                    System.out.println("Qual Operador Você Quer Utilizar: Soma(1), Subtração(2), Multiplicação(3), Divisão(4)");
+                    operador = leitor.next();
+
+                    System.out.println("Escreva o Segundo Número ");
+                    num2 = leitor.nextDouble();
+
+                    switch (operador) {
+                    case "1":
+                    System.out.println(soma(num, num2));
+                    break;
+
+                    case "2":
+                    System.out.println(subt(num, num2));
+                    break;
+
+                    case "3":
+                    System.out.println(mult(num, num2));
+                    break;
+
+                    case "4":
+                    System.out.println(div(num,num2));
+                    break;
+
+                    default:
+                    System.out.println("Opção Invalida");
+                    }
+
+
+
+
+                while(true) {
+                    System.out.println("Voce deseja limpar o calculo e Recomeçar? Sim(1), Nao(2) ou Deseja Sair (0)");
+                    escolha = leitor.next();
+                    if (escolha.equals("1")); {
+                        System.out.println("Escreva o Primeiro Número: ");
+                        num = leitor.nextDouble();
+
+                        System.out.println("Qual Operador Você Quer Utilizar: Soma(1), Subtração(2), Multiplicação(3), Divisão(4)");
+                        operador = leitor.next();
+
+                        System.out.println("Escreva o Segundo Número ");
+                        num2 = leitor.nextDouble();
+
+                        switch (operador) {
+                        case "1":
+                        System.out.println(soma(num, num2));
+                        break;
+
+                        case "2":
+                        System.out.println(subt(num, num2));
+                        break;
+
+                        case "3":
+                        System.out.println(mult(num, num2));
+                        break;
+
+                        case "4":
+                        System.out.println(div(num,num2));
+                        break;
+
+                        default:
+                        System.out.println("Opção Invalida");
+                        }
+                    }
+                    else {
+                        break;
+                    }
+
+
+                }
+            }
+        }
+}
